@@ -2,6 +2,8 @@ name: Label Issue
 on: 
   issues:
     types:
+      - reopened
+      -  opened
   
 jobs:
   label-issues:
