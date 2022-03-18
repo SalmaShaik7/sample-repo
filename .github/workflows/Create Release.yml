@@ -1,4 +1,4 @@
-name: Create Release
+name: Release
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     #  env:
     #      GITHUB_TOKEN: $({ secrete.GITHUB_TOKEN })
     
-   - name: Create Release
+   - name: Release
      run: |
       git init . -q
       git remote add origin https://github.com/SalmaShaik7/${{env.repo}}.git  >> /dev/null
