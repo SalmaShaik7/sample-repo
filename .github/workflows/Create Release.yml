@@ -2,8 +2,7 @@ name: Create Release
 
 on:
   push:
-    tags:
-      - '*v*'
+ 
 env: 
  repo: sample-repo
 jobs:
@@ -20,7 +19,7 @@ jobs:
    - name: Create Release
      run: |
       git init . -q
-      git remote add origin https://github.com/telia-company/${{env.repo}}.git  >> /dev/null
+      git remote add origin https://github.com/SalmaShaik7/${{env.repo}}.git  >> /dev/null
       echo "${{secrets.TOKEN}}" | gh auth login -h github.com --with-token
       REL_NAME=`${{github.ref}} | cut -d '.' | sed 's/^0*/g'`
       gh release create ${{ github.ref }} --generate-notes --title ${REL_NAME}
